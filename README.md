@@ -1,1 +1,6 @@
-# My project's README
+### Run app
+
+```
+npm install
+npm run serve
+```
