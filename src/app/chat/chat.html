@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="list-messages-wrapper">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Chat</h3>
+                    </div>
+                    <div class="panel-body" scroll-glue>
+                        <ul class="list-messages">
+                            <li ng-repeat="message in messages track by $index">
+                                <span class="time">{{message.date}}</span>
+                                <span class="name">{{message.userName}}:</span>
+                                <span class="message">{{message.message}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <audio class="hidden" src="http://mihailo.centarzatalente.com/sounds/click.mp3"></audio>
+                    <div class="panel-footer">
+                        <form name="chatForm" class="form-horizontal" ng-submit="sendMessage()">
+                            <div class="form-group">
+                                <label class="sr-only">Your message</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" name="message"
+                                           ng-model="message" placeholder="Your message" required>
+                                </div>
+                                <div class="col-xs-2">
+                                    <button type="submit" class="btn btn-primary btn-block" ng-disabled="chatForm.$invalid">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+html {
+
+}
+
+.list-messages-wrapper {
+  .panel-body {
+    height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  form {
+    .form-group {
+      margin: 0;
+    }
+  }
+}
